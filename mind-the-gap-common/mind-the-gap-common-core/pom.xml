@@ -113,6 +113,20 @@
             <artifactId>swagger-annotations</artifactId>
         </dependency>
 
+        <!-- hutool< -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.7.9</version>
+        </dependency>
+
+        <!-- lombok< -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
 </project>

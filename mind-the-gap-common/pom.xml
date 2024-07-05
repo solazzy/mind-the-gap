@@ -15,7 +15,6 @@
         <module>mind-the-gap-common-seata</module>
         <module>mind-the-gap-common-swagger</module>
         <module>mind-the-gap-common-security</module>
-        <module>mind-the-gap-common-sensitive</module>
         <module>mind-the-gap-common-datascope</module>
         <module>mind-the-gap-common-datasource</module>
     </modules>

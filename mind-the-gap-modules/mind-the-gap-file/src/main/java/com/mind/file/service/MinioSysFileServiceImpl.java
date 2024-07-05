@@ -1,6 +1,8 @@
 package com.mind.file.service;
 
 import java.io.InputStream;
+
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -9,6 +11,7 @@ import com.mind.file.config.MinioConfig;
 import com.mind.file.utils.FileUploadUtils;
 import io.minio.MinioClient;
 import io.minio.PutObjectArgs;
+import cn.hutool.core.date.*;
 
 /**
  * Minio 文件存储
@@ -16,6 +19,8 @@ import io.minio.PutObjectArgs;
  * @author ruoyi
  */
 @Service
+
+@Slf4j
 public class MinioSysFileServiceImpl implements ISysFileService
 {
     @Autowired
@@ -34,6 +39,9 @@ public class MinioSysFileServiceImpl implements ISysFileService
     @Override
     public String uploadFile(MultipartFile file) throws Exception
     {
+        // 此工具用于存储一组任务的耗时时间，并一次性打印对比。
+        StopWatch stopWatch = DateUtil.createStopWatch();
+        stopWatch.start();
         String fileName = FileUploadUtils.extractFilename(file);
         InputStream inputStream = file.getInputStream();
         PutObjectArgs args = PutObjectArgs.builder()
@@ -44,6 +52,8 @@ public class MinioSysFileServiceImpl implements ISysFileService
                 .build();
         client.putObject(args);
         IoUtils.closeQuietly(inputStream);
+        stopWatch.stop();
+        log.info(stopWatch.prettyPrint());
         return minioConfig.getUrl() + "/" + minioConfig.getBucketName() + "/" + fileName;
     }
 }
