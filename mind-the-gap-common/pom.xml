@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>mind</groupId>
+        <artifactId>mind</artifactId>
+        <version>3.6.4</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <modules>
+        <module>mind-the-gap-common-log</module>
+        <module>mind-the-gap-common-core</module>
+        <module>mind-the-gap-common-redis</module>
+        <module>mind-the-gap-common-seata</module>
+        <module>mind-the-gap-common-swagger</module>
+        <module>mind-the-gap-common-security</module>
+        <module>mind-the-gap-common-sensitive</module>
+        <module>mind-the-gap-common-datascope</module>
+        <module>mind-the-gap-common-datasource</module>
+    </modules>
+
+    <artifactId>mind-common</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        mind-the-gap-common通用模块
+    </description>
+
+</project>

@@ -1,0 +1,3 @@
+# com.mind.common.swagger.config.SwaggerAutoConfiguration
+# com.mind.common.swagger.config.SwaggerWebConfiguration
+# com.mind.common.swagger.config.SwaggerBeanPostProcessor

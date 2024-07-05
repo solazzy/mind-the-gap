@@ -1,0 +1,2 @@
+com.mind.common.redis.configure.RedisConfig
+com.mind.common.redis.service.RedisService

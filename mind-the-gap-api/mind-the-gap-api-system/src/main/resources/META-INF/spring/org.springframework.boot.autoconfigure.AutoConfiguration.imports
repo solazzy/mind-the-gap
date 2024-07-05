@@ -1,0 +1,3 @@
+com.mind.system.api.factory.RemoteUserFallbackFactory
+com.mind.system.api.factory.RemoteLogFallbackFactory
+com.mind.system.api.factory.RemoteFileFallbackFactory
